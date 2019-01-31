@@ -1,0 +1,7 @@
+credentials.yml
+*.trained.*
+rasa_core.log
+story_graph.dot
+data/
+
+__pycache__/

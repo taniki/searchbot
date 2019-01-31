@@ -1,0 +1,48 @@
+intents:
+  - hello
+  - search_dataset
+  - confirm
+  - deny
+#  - default
+
+
+actions:
+  - utter_greet
+  - utter_sad
+  - utter_bye
+  - utter_default
+  - utter_ask_query
+  - utter_query
+  - action_set_query
+  - action_check_results
+  - action_give_results
+  - action_ask_refine
+
+
+templates:
+  utter_greet:
+    - text: "https://media.giphy.com/media/pSpmpxFxFwDpC/giphy.gif"
+  utter_sad:
+    - text: "😟"
+    - text: "😞"
+    - text: "🙁"
+  utter_victory:
+    - "✌️"
+  utter_ask_query:
+    - text: "Qu'est-ce que tu cherches petit bonhomme ?"
+  utter_query:
+    - text: "Vous cherchez actuellement: {query}"
+  utter_submit:
+    - text: "merci !"
+  utter_default:
+    - "Désolé mais je ne suis pas certain d'avoir compris ce que vous dîtes. Alors que faire ? Jeter le bébé avec l'eau du bain ? Je ne sais pas mais peut ếtre que oui."
+
+slots:
+  query:
+    type: text
+  results:
+    type: list
+    initial_value: []
+  total:
+    type: float
+    initial_value: 0
